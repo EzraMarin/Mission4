@@ -10,7 +10,7 @@ namespace Mission4.Models
     {
         [Key]
 
-        [Required(ErrorMessage = "Category is required")]
+        [Required]
         public string Category { get; set; }
 
         [Required(ErrorMessage = "Title is required")]

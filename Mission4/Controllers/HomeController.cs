@@ -34,10 +34,17 @@ namespace Mission4.Controllers
         [HttpPost]
         public IActionResult MovieInfo(MovieInfo ar)
         {
-            Context.Add(ar);
-            Context.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                Context.Add(ar);
+                Context.SaveChanges();
 
-            return View("Confirmation", ar);
+                return View("Confirmation", ar);
+            }
+            else
+            {
+                return View(ar);
+            }
         }
     }
 }

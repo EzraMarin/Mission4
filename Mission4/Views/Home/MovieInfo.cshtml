@@ -8,6 +8,7 @@
 <div>
     <form method="post">
         <div asp-validation-summary="All"></div>
+
         <label asp-for="Category">Category:</label>
         <input asp-for="Category" /><br />
 
@@ -37,9 +38,10 @@
         <label asp-for="LentTo">Lent To:</label>
         <input asp-for="LentTo" /><br />
 
-        <label asp-for="Notes" >Notes:</label>
+        <label asp-for="Notes">Notes:</label>
         <input asp-for="Notes" /><br />
 
         <button type="submit">Submit Application</button>
+       
     </form>
 </div>
